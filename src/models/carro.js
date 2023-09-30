@@ -90,6 +90,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
+    Marca.hasMany(Carro);
     Carro.belongTo(Marca);
 
     return Carro;
