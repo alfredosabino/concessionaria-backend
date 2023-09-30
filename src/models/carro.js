@@ -90,12 +90,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
-    Carro.associate = (models) => {
-        Carro.belongsTo(
-            models.Conta, { foreignKey: 'contaId' },
-            models.Marca, { foreignKey: 'marca' }
-        );
-    };
+    Carro.belongTo(Marca);
 
     return Carro;
 };
